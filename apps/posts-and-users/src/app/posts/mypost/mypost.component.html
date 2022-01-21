@@ -1,0 +1,7 @@
+<div>
+    <div (click)="postClicked()" class="mypost">
+        {{post?.id}} => {{post?.title}}
+    </div>
+    <a [routerLink]="['post',post?.id]">See Full Post</a>
+
+</div>

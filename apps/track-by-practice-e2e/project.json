@@ -1,0 +1,28 @@
+{
+  "root": "apps/track-by-practice-e2e",
+  "sourceRoot": "apps/track-by-practice-e2e/src",
+  "projectType": "application",
+  "targets": {
+    "e2e": {
+      "executor": "@nrwl/cypress:cypress",
+      "options": {
+        "cypressConfig": "apps/track-by-practice-e2e/cypress.json",
+        "devServerTarget": "track-by-practice:serve:development"
+      },
+      "configurations": {
+        "production": {
+          "devServerTarget": "track-by-practice:serve:production"
+        }
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["apps/track-by-practice-e2e/**/*.{js,ts}"]
+      }
+    }
+  },
+  "tags": [],
+  "implicitDependencies": ["track-by-practice"]
+}

@@ -1,0 +1,14 @@
+<h1> Posts:</h1>
+<ng-container *ngIf="posts && posts.length >= 0;else loadBlock ">
+    <ul *ngIf="posts.length >0 ;else errorBlock">
+        <li *ngFor="let post of posts">
+            {{post |json}}
+        </li>
+    </ul>
+</ng-container>
+<ng-template #errorBlock>
+    <h1>Not able to load posts</h1>
+</ng-template>
+<ng-template #loadBlock>
+    <h1>Loading Posts....</h1>
+</ng-template>

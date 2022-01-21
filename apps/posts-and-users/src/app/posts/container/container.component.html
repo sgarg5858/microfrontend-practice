@@ -1,0 +1,17 @@
+<ng-container *ngIf="(user$| async) as user " >
+    <h1 class="userLoggedinHeading" *ngIf="user.isLoggedIn">
+        You are logged in {{user?.useremail}}
+    </h1>
+</ng-container>
+
+
+<microfrontends-demo-myposts></microfrontends-demo-myposts>
+<microfrontends-demo-myposts></microfrontends-demo-myposts>
+<microfrontends-demo-myposts></microfrontends-demo-myposts>
+<microfrontends-demo-myposts></microfrontends-demo-myposts>
+<microfrontends-demo-myposts></microfrontends-demo-myposts>
+<microfrontends-demo-myposts></microfrontends-demo-myposts>
+
+<button [disabled]="condition">
+    {{getButtonName()}}
+</button>

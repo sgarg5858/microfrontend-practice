@@ -1,0 +1,33 @@
+<div class="loginContainer">
+        <div class="formContainer">
+            <form class="loginFormElement" [formGroup]="loginForm" novalidate>
+                <p class="loginFormHeading">Login Form</p>
+                <label> Your email:
+                    <input id="userInputEmail" type="email" matInput formControlName="useremail" />
+                </label>
+                <span class="error emailError" *ngIf="loginForm.controls?.['useremail']?.['touched'] && loginForm.controls?.['useremail']?.['errors']?.['required']">
+                    Email is required
+                </span>
+                <span class="emailNotValid error" *ngIf="loginForm.controls?.['useremail']?.['touched'] && loginForm.controls?.['useremail']?.['errors']?.['email']">
+                    Email is not valid
+                </span>
+    
+                <label> Your password: 
+                    <input  id="userInputPassword" type="password" matInput formControlName="userpassword" />
+                </label>
+                <span class="error passwordError" *ngIf="loginForm.controls?.['userpassword']?.['touched'] && loginForm.controls?.['userpassword']?.['errors']?.['required']">
+                    Password is required
+                </span>
+
+                <span class="error passwordError" *ngIf="loginForm.controls?.['userpassword']?.['touched'] && loginForm.controls?.['userpassword']?.['errors']?.['minlength']">
+                    Password should have minimum 6 characters
+                </span>
+
+    
+            <button  class="loginButton" type="button" (click)="login()"  [disabled]="loginForm.invalid">
+                Login
+            </button>
+    
+        </form>
+        </div>
+</div>

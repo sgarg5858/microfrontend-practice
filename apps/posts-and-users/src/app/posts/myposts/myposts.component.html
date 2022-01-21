@@ -1,0 +1,19 @@
+<ng-container *ngIf="(posts$ | async) as posts; else loadingBlock">
+    <ng-container *ngIf="posts.length > 0; else errorBlock">
+
+        <div style="color: dodgerblue;">
+            {{
+                selectedPost |  json
+            }}
+        </div>
+        <microfrontends-demo-mypost [post]="post" (postClick)="logIt($event)" *ngFor="let post of posts">
+        </microfrontends-demo-mypost>
+
+    </ng-container>
+    <ng-template #errorBlock>
+        <h1>Not able to load posts</h1>
+    </ng-template>
+</ng-container>
+<ng-template #loadingBlock>
+    <h1>Loading posts .........</h1>
+</ng-template>

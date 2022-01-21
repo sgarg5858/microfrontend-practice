@@ -1,0 +1,7 @@
+<button (click)="refresh()">Refresh {{color}} </button>
+<ng-container *ngFor="let photo of photos;">
+    <div >
+       {{photo.id}} => {{photo.title}}
+    </div>
+</ng-container>
+<microfrontends-demo-trackby></microfrontends-demo-trackby>

@@ -1,0 +1,16 @@
+<h1>Users</h1>
+
+<ng-container *ngIf="users && users.length >= 0;else loadBlock ">
+    <ul *ngIf="users.length >0 ;else errorBlock  ">
+        <li *ngFor="let user of users">
+            {{user | json}}
+        </li>
+    </ul>
+</ng-container>
+<ng-template #errorBlock>
+    <h1>Not able to load users</h1>
+</ng-template>
+
+<ng-template #loadBlock>
+    <h1>Loading Users....</h1>
+</ng-template>

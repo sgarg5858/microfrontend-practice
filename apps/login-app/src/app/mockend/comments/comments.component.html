@@ -1,0 +1,17 @@
+<h1>Comments</h1>
+
+<ng-container *ngIf="comments && comments.length >= 0;else loadBlock ">
+    <div  class="limitedHeight" *ngIf="comments.length>0 ; else errorBlock">
+        <div *ngFor="let comment of comments">
+            {{comment | json}}
+        </div>
+    </div>
+</ng-container>
+
+<ng-template #loadBlock>
+    <h1>Loading Comments....</h1>
+</ng-template>
+
+<ng-template #errorBlock>
+    <h1>Not able to load comments</h1>
+</ng-template>

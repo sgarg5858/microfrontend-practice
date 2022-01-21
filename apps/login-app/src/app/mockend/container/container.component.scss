@@ -1,0 +1,14 @@
+.container{
+    height: 100vh;
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 50px;
+    .posts{
+        margin: 10px;
+        height: 300px;
+        width: 500px;
+        border: 1px solid black;
+        overflow: scroll;
+        padding: 20px;
+        }
+}

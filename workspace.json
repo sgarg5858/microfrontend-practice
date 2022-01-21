@@ -1,4 +1,17 @@
 {
   "version": 2,
-  "projects": {}
+  "projects": {
+    "eslint-rules": "tools/eslint-rules",
+    "login": "apps/login",
+    "login-app": "apps/login-app",
+    "login-app-e2e": "apps/login-app-e2e",
+    "login-e2e": "apps/login-e2e",
+    "posts-and-users": "apps/posts-and-users",
+    "posts-and-users-e2e": "apps/posts-and-users-e2e",
+    "shared-data-access-user": "libs/shared/data-access-user",
+    "shell": "apps/shell",
+    "shell-e2e": "apps/shell-e2e",
+    "track-by-practice": "apps/track-by-practice",
+    "track-by-practice-e2e": "apps/track-by-practice-e2e"
+  }
 }
